@@ -2,6 +2,7 @@ const express = require('express')
 const directory = 'C:\\Users\\SRAVANTHI\\Documents\\GUVI_PRACTICE\\GUVI_LEARNING\\guvi_learning';
 const path = require('path');
 const fs = require('fs');
+const dotenv = require('dotenv')
 
 const app = express()
 
@@ -29,5 +30,6 @@ app.get('/', (req, res) => {
     
 })
 
+const PORT = process.env.PORT || 5000
 
- app.listen(process.env.PORT || 5000,()=>console.log(`your app is running on ${PORT}`))
+ app.listen(PORT,()=>console.log(`your app is running on ${PORT}`))
